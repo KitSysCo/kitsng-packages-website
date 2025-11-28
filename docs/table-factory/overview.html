@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overview - Kitsng Docs</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-    <style>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Overview - Kitsng Docs</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<style>
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -32,166 +31,142 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <div class="flex min-h-screen">
-        <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 fixed h-screen overflow-y-auto">
-            <div class="p-6">
-                <h1 class="text-2xl font-bold text-gray-900 mb-2"><a href="../../index.html" class="hover:text-blue-600">Kitsng Docs</a></h1>
-                <p class="text-sm text-gray-600 mb-6">v20 Documentation</p>
-                
-                <nav class="space-y-2">
-                    <div class="mb-4">
-                        <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Form Factory</h2>
-                        <ul class="space-y-1">
-                            <li><a href="../form-factory/index.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Overview</a></li>
-                            <li><a href="../form-factory/installation.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Installation</a></li>
-                            <li><a href="../form-factory/quick-start.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Quick Start</a></li>
-                            <li class="ml-4">
-                                <details class="group">
-                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Fields</summary>
-                                    <ul class="ml-4 mt-1 space-y-1">
-                                        <li><a href="../form-factory/fields/input.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Input</a></li>
-                                        <li><a href="../form-factory/fields/textarea.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Textarea</a></li>
-                                        <li><a href="../form-factory/fields/dropdown.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Dropdown</a></li>
-                                        <li><a href="../form-factory/fields/checkbox.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Checkbox</a></li>
-                                        <li><a href="../form-factory/fields/input-number.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Input Number</a></li>
-                                        <li><a href="../form-factory/fields/input-phone.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Input Phone</a></li>
-                                        <li><a href="../form-factory/fields/radio-button.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Radio Button</a></li>
-                                        <li><a href="../form-factory/fields/multi-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Multi Select</a></li>
-                                        <li><a href="../form-factory/fields/calendar-picker.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Calendar Picker</a></li>
-                                        <li><a href="../form-factory/fields/lookup-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Lookup Select</a></li>
-                                        <li><a href="../form-factory/fields/lookup-multi-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Lookup Multi Select</a></li>
-                                        <li><a href="../form-factory/fields/file-upload.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">File Upload</a></li>
-                                        <li><a href="../form-factory/fields/color-picker.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Color Picker</a></li>
-                                        <li><a href="../form-factory/fields/editor.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Editor</a></li>
-                                        <li><a href="../form-factory/fields/google-map.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Google Map</a></li>
-                                        <li><a href="../form-factory/fields/slider.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Slider</a></li>
-                                        <li><a href="../form-factory/fields/icon-picker.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Icon Picker</a></li>
-                                        <li><a href="../form-factory/fields/tree-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Tree Select</a></li>
-                                        <li><a href="../form-factory/fields/auto-complete.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Auto Complete</a></li>
-                                        <li><a href="../form-factory/fields/button.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Button</a></li>
-                                        <li><a href="../form-factory/fields/password.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Password</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li class="ml-4">
-                                <details class="group">
-                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Examples</summary>
-                                    <ul class="ml-4 mt-1 space-y-1">
-                                        <li><a href="../form-factory/examples/basic-form.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Basic Form</a></li>
-                                        <li><a href="../form-factory/examples/complex-form.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Complex Form</a></li>
-                                        <li><a href="../form-factory/examples/dynamic-form.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Dynamic Form</a></li>
-                                        <li><a href="../form-factory/examples/complete-example.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Complete Example</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Table Factory</h2>
-                        <ul class="space-y-1">
-                            <li><a href="index.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Overview</a></li>
-                            <li><a href="installation.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Installation</a></li>
-                            <li><a href="quick-start.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Quick Start</a></li>
-                            <li><a href="overview.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Architecture Overview</a></li>
-                            <li class="ml-4">
-                                <details class="group">
-                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Components</summary>
-                                    <ul class="ml-4 mt-1 space-y-1">
-                                        <li><a href="components/table-factory.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Table Factory</a></li>
-                                        <li><a href="components/fetch-table-factory.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Fetch Table Factory</a></li>
-                                        <li><a href="components/tree-table-factory.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Tree Table Factory</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li class="ml-4">
-                                <details class="group">
-                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Features</summary>
-                                    <ul class="ml-4 mt-1 space-y-1">
-                                        <li><a href="features/column-templates.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Column Templates</a></li>
-                                        <li><a href="features/api-integration.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">API Integration</a></li>
-                                        <li><a href="features/row-actions.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Row Actions</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li class="ml-4">
-                                <details class="group">
-                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Examples</summary>
-                                    <ul class="ml-4 mt-1 space-y-1">
-                                        <li><a href="examples/basic-table.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Basic Table</a></li>
-                                        <li><a href="examples/table-with-api.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Table with API</a></li>
-                                        <li><a href="examples/complete-example.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Complete Example</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li><a href="api/interfaces.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">API Reference</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </aside>
-        
-        <main class="flex-1 ml-64">
-            <div class="max-w-4xl mx-auto px-8 py-12">
-                <div class="bg-white rounded-lg shadow-sm p-8">
-                    <div class="prose prose-lg max-w-none">
-                        <h1 class="text-4xl font-bold text-gray-900 mb-6 mt-8">Overview</h1>
-
+<div class="flex min-h-screen">
+<aside class="w-64 bg-white border-r border-gray-200 fixed h-screen overflow-y-auto" id="sidebar">
+<div class="p-6">
+<h1 class="text-2xl font-bold text-gray-900 mb-2"><a class="hover:text-blue-600" href="../../index.html">Kitsng Docs</a></h1>
+<p class="text-sm text-gray-600 mb-6">v20 Documentation</p>
+<nav class="space-y-2">
+<div class="mb-4">
+<h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Form Factory</h2>
+<ul class="space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../form-factory/index.html">Overview</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../form-factory/installation.html">Installation</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../form-factory/quick-start.html">Quick Start</a></li>
+<li class="ml-4">
+<details class="group">
+<summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Fields</summary>
+<ul class="ml-4 mt-1 space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/input.html">Input</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/textarea.html">Textarea</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/dropdown.html">Dropdown</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/checkbox.html">Checkbox</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/input-number.html">Input Number</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/input-phone.html">Input Phone</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/radio-button.html">Radio Button</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/multi-select.html">Multi Select</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/calendar-picker.html">Calendar Picker</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/lookup-select.html">Lookup Select</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/lookup-multi-select.html">Lookup Multi Select</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/file-upload.html">File Upload</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/color-picker.html">Color Picker</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/editor.html">Editor</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/google-map.html">Google Map</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/slider.html">Slider</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/icon-picker.html">Icon Picker</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/tree-select.html">Tree Select</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/auto-complete.html">Auto Complete</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/button.html">Button</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/fields/password.html">Password</a></li>
+</ul>
+</details>
+</li>
+<li class="ml-4">
+<details class="group">
+<summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Examples</summary>
+<ul class="ml-4 mt-1 space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/examples/basic-form.html">Basic Form</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/examples/complex-form.html">Complex Form</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/examples/dynamic-form.html">Dynamic Form</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../form-factory/examples/complete-example.html">Complete Example</a></li>
+</ul>
+</details>
+</li>
+</ul>
+</div>
+<div class="mb-4">
+<h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Table Factory</h2>
+<ul class="space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="index.html">Overview</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="installation.html">Installation</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="quick-start.html">Quick Start</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="overview.html">Architecture Overview</a></li>
+<li class="ml-4">
+<details class="group">
+<summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Components</summary>
+<ul class="ml-4 mt-1 space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="components/table-factory.html">Table Factory</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="components/fetch-table-factory.html">Fetch Table Factory</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="components/tree-table-factory.html">Tree Table Factory</a></li>
+</ul>
+</details>
+</li>
+<li class="ml-4">
+<details class="group">
+<summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Features</summary>
+<ul class="ml-4 mt-1 space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="features/column-templates.html">Column Templates</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="features/api-integration.html">API Integration</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="features/row-actions.html">Row Actions</a></li>
+</ul>
+</details>
+</li>
+<li class="ml-4">
+<details class="group">
+<summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Examples</summary>
+<ul class="ml-4 mt-1 space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="examples/basic-table.html">Basic Table</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="examples/table-with-api.html">Table with API</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="examples/complete-example.html">Complete Example</a></li>
+</ul>
+</details>
+</li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="api/interfaces.html">API Reference</a></li>
+</ul>
+</div>
+</nav>
+</div>
+</aside>
+<main class="flex-1 ml-64">
+<div class="max-w-4xl mx-auto px-8 py-12">
+<div class="bg-white rounded-lg shadow-sm p-8">
+<div class="prose prose-lg max-w-none">
+<h1 class="text-4xl font-bold text-gray-900 mb-6 mt-8">Overview</h1>
 <p class="text-gray-700 mb-4 leading-relaxed">Understanding the architecture and concepts of Kitsng Table Factory.</p>
-
 <h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Architecture</h2>
-
 <p class="text-gray-700 mb-4 leading-relaxed">Kitsng Table Factory consists of three main components:</p>
-
 <ol class="list-decimal list-inside space-y-2 my-4 ml-4">
 <li class="text-gray-700"><strong class="font-semibold">KitsngTableFactory</strong> - Basic table component for static data</li>
 <li class="text-gray-700"><strong class="font-semibold">KitsngFetchTableFactory</strong> - Table component with API data fetching</li>
 <li class="text-gray-700"><strong class="font-semibold">KitsngTreeTableFactory</strong> - Hierarchical tree table component</li>
 </ol>
-
 <h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Core Concepts</h2>
-
 <h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Table Configuration</h3>
-
 <p class="text-gray-700 mb-4 leading-relaxed">All components use a <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">KitsngTableConfig</code> object to configure the table:</p>
-
 <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">interface KitsngTableConfig {
   columns: KitsngColumnOption[];  // Column definitions
   data: any[];                    // Table data
   // ... other configuration options
-}
-</code></pre>
-
-<h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Column Configuration</h3>
-
+}</code></pre><h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Column Configuration</h3>
 <p class="text-gray-700 mb-4 leading-relaxed">Each column is defined with a <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">KitsngColumnOption</code>:</p>
-
 <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">interface KitsngColumnOption {
   field: string;                  // Data field name
   header: string;                 // Column header
   sortable?: boolean;             // Enable sorting
-  template?: TemplateRef<any>;    // Custom template
+  template?: TemplateRef;    // Custom template
   visible?: boolean;              // Column visibility
   width?: string;                 // Column width
   // ... other options
-}
-</code></pre>
-
-<h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Data Flow</h3>
-
+}</code></pre><h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Data Flow</h3>
 <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-text">┌─────────────────┐
 │   Data Source │
 └───────┬───────┘
         │
-        ├─── Static Data ───> KitsngTableFactory
+        ├─── Static Data ───&amp;gt; KitsngTableFactory
         │
-        ├─── API Data ───> KitsngFetchTableFactory
+        ├─── API Data ───&amp;gt; KitsngFetchTableFactory
         │
-        └─── Tree Data ───> KitsngTreeTableFactory
-</code></pre>
-
-<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Component Comparison</h2>
-
+        └─── Tree Data ───&amp;gt; KitsngTreeTableFactory</code></pre><h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Component Comparison</h2>
 <div class="overflow-x-auto my-6">
 <table class="min-w-full divide-y divide-gray-200 border border-gray-300">
 <thead class="bg-gray-50">
@@ -248,35 +223,23 @@
 </tbody>
 </table>
 </div>
-
 <h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Key Features</h2>
-
 <h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">1. Generic API System</h3>
-
 <p class="text-gray-700 mb-4 leading-relaxed">Works with any API structure:</p>
-
 <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">fetchApiInfo: {
-  fetchFunction: (query) => this.http.post('/api/data', query),
-  responseMapper: (response) => ({
+  fetchFunction: (query) =&amp;gt; this.http.post('/api/data', query),
+  responseMapper: (response) =&amp;gt; ({
     items: response.data.items,
     totalItems: response.data.total
   })
-}
-</code></pre>
-
-<h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">2. Flexible Templates</h3>
-
+}</code></pre><h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">2. Flexible Templates</h3>
 <p class="text-gray-700 mb-4 leading-relaxed">Two ways to provide templates:</p>
-
 <ul class="list-disc list-inside space-y-2 my-4 ml-4">
-<li class="text-gray-700"><strong class="font-semibold">HTML Directive</strong>: <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono"><ng-template kitsngColumnTemplate="field"></code></li>
+<li class="text-gray-700"><strong class="font-semibold">HTML Directive</strong>: <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono"><ng-template kitsngcolumntemplate="field"></ng-template></code></li>
 <li class="text-gray-700"><strong class="font-semibold">TypeScript Config</strong>: <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">column.template = this.templateRef</code></li>
 </ul>
-
 <h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">3. Event Handling</h3>
-
 <p class="text-gray-700 mb-4 leading-relaxed">Rich event system:</p>
-
 <ul class="list-disc list-inside space-y-2 my-4 ml-4">
 <li class="text-gray-700">Row clicks (single, double)</li>
 <li class="text-gray-700">Cell clicks</li>
@@ -285,22 +248,16 @@
 <li class="text-gray-700">Sorting events</li>
 <li class="text-gray-700">Row expand/collapse</li>
 </ul>
-
 <h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">4. Styling</h3>
-
 <p class="text-gray-700 mb-4 leading-relaxed">Self-contained CSS framework:</p>
-
 <ul class="list-disc list-inside space-y-2 my-4 ml-4">
 <li class="text-gray-700">Custom <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">kitsng-</code> prefixed classes</li>
 <li class="text-gray-700">No PrimeFlex/Bootstrap dependency</li>
 <li class="text-gray-700">Consistent styling</li>
 </ul>
-
 <h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Data Structures</h2>
-
 <h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Pagination Response</h3>
-
-<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">interface KitsngPaginationResponse<T> {
+<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">interface KitsngPaginationResponse {
   items: T[];
   totalItems?: number;
   pageInfo?: {
@@ -309,32 +266,15 @@
     pageIndex?: number;
     pageSize?: number;
   };
-}
-</code></pre>
-
-<h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Table Query</h3>
-
+}</code></pre><h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Table Query</h3>
 <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">interface KitsngTableQuery {
   pageIndex?: number;
   pageSize?: number;
   search?: string;
   filters?: any;
-<div class="overflow-x-auto my-6">
-<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
-<thead class="bg-gray-50">
-<tr>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-</tbody>
-</table>
-</div>
+
   [key: string]: any;
-}
-</code></pre>
-
-<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Best Practices</h2>
-
+}</code></pre><h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Best Practices</h2>
 <ol class="list-decimal list-inside space-y-2 my-4 ml-4">
 <li class="text-gray-700"><strong class="font-semibold">Use FetchTableFactory</strong> for API-driven data</li>
 <li class="text-gray-700"><strong class="font-semibold">Use TableFactory</strong> for static/small datasets</li>
@@ -344,20 +284,16 @@
 <li class="text-gray-700"><strong class="font-semibold">Handle events</strong> for user interactions</li>
 <li class="text-gray-700"><strong class="font-semibold">Configure pagination</strong> for large datasets</li>
 </ol>
-
 <h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Next Steps</h2>
-
 <ul class="list-disc list-inside space-y-2 my-4 ml-4">
-<li class="text-gray-700"><a href="components/TABLE-FACTORY.html" class="text-blue-600 hover:text-blue-800 underline">Component Documentation</a></li>
-<li class="text-gray-700"><a href="features/COLUMN-TEMPLATES.html" class="text-blue-600 hover:text-blue-800 underline">Feature Guides</a></li>
-<li class="text-gray-700"><a href="api/INTERFACES.html" class="text-blue-600 hover:text-blue-800 underline">API Reference</a></li>
+<li class="text-gray-700"><a class="text-blue-600 hover:text-blue-800 underline" href="components/TABLE-FACTORY.html">Component Documentation</a></li>
+<li class="text-gray-700"><a class="text-blue-600 hover:text-blue-800 underline" href="features/COLUMN-TEMPLATES.html">Feature Guides</a></li>
+<li class="text-gray-700"><a class="text-blue-600 hover:text-blue-800 underline" href="api/INTERFACES.html">API Reference</a></li>
 </ul>
+</div>
+</div>
+</div>
+</main>
+</div>
 
-
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-</body>
-</html>
+</body></html>

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Example - Kitsng Docs</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-    <style>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Complete Example - Kitsng Docs</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<style>
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -32,115 +31,109 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <div class="flex min-h-screen">
-        <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 fixed h-screen overflow-y-auto">
-            <div class="p-6">
-                <h1 class="text-2xl font-bold text-gray-900 mb-2"><a href="../../../index.html" class="hover:text-blue-600">Kitsng Docs</a></h1>
-                <p class="text-sm text-gray-600 mb-6">v20 Documentation</p>
-                
-                <nav class="space-y-2">
-                    <div class="mb-4">
-                        <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Form Factory</h2>
-                        <ul class="space-y-1">
-                            <li><a href="../../form-factory/index.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Overview</a></li>
-                            <li><a href="../../form-factory/installation.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Installation</a></li>
-                            <li><a href="../../form-factory/quick-start.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Quick Start</a></li>
-                            <li class="ml-4">
-                                <details class="group">
-                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Fields</summary>
-                                    <ul class="ml-4 mt-1 space-y-1">
-                                        <li><a href="../../form-factory/fields/input.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Input</a></li>
-                                        <li><a href="../../form-factory/fields/textarea.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Textarea</a></li>
-                                        <li><a href="../../form-factory/fields/dropdown.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Dropdown</a></li>
-                                        <li><a href="../../form-factory/fields/checkbox.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Checkbox</a></li>
-                                        <li><a href="../../form-factory/fields/input-number.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Input Number</a></li>
-                                        <li><a href="../../form-factory/fields/input-phone.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Input Phone</a></li>
-                                        <li><a href="../../form-factory/fields/radio-button.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Radio Button</a></li>
-                                        <li><a href="../../form-factory/fields/multi-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Multi Select</a></li>
-                                        <li><a href="../../form-factory/fields/calendar-picker.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Calendar Picker</a></li>
-                                        <li><a href="../../form-factory/fields/lookup-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Lookup Select</a></li>
-                                        <li><a href="../../form-factory/fields/lookup-multi-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Lookup Multi Select</a></li>
-                                        <li><a href="../../form-factory/fields/file-upload.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">File Upload</a></li>
-                                        <li><a href="../../form-factory/fields/color-picker.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Color Picker</a></li>
-                                        <li><a href="../../form-factory/fields/editor.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Editor</a></li>
-                                        <li><a href="../../form-factory/fields/google-map.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Google Map</a></li>
-                                        <li><a href="../../form-factory/fields/slider.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Slider</a></li>
-                                        <li><a href="../../form-factory/fields/icon-picker.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Icon Picker</a></li>
-                                        <li><a href="../../form-factory/fields/tree-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Tree Select</a></li>
-                                        <li><a href="../../form-factory/fields/auto-complete.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Auto Complete</a></li>
-                                        <li><a href="../../form-factory/fields/button.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Button</a></li>
-                                        <li><a href="../../form-factory/fields/password.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Password</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li class="ml-4">
-                                <details class="group">
-                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Examples</summary>
-                                    <ul class="ml-4 mt-1 space-y-1">
-                                        <li><a href="../../form-factory/examples/basic-form.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Basic Form</a></li>
-                                        <li><a href="../../form-factory/examples/complex-form.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Complex Form</a></li>
-                                        <li><a href="../../form-factory/examples/dynamic-form.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Dynamic Form</a></li>
-                                        <li><a href="../../form-factory/examples/complete-example.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Complete Example</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Table Factory</h2>
-                        <ul class="space-y-1">
-                            <li><a href="../../table-factory/index.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Overview</a></li>
-                            <li><a href="../../table-factory/installation.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Installation</a></li>
-                            <li><a href="../../table-factory/quick-start.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Quick Start</a></li>
-                            <li><a href="../../table-factory/overview.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Architecture Overview</a></li>
-                            <li class="ml-4">
-                                <details class="group">
-                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Components</summary>
-                                    <ul class="ml-4 mt-1 space-y-1">
-                                        <li><a href="../../table-factory/components/table-factory.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Table Factory</a></li>
-                                        <li><a href="../../table-factory/components/fetch-table-factory.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Fetch Table Factory</a></li>
-                                        <li><a href="../../table-factory/components/tree-table-factory.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Tree Table Factory</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li class="ml-4">
-                                <details class="group">
-                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Features</summary>
-                                    <ul class="ml-4 mt-1 space-y-1">
-                                        <li><a href="../../table-factory/features/column-templates.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Column Templates</a></li>
-                                        <li><a href="../../table-factory/features/api-integration.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">API Integration</a></li>
-                                        <li><a href="../../table-factory/features/row-actions.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Row Actions</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li class="ml-4">
-                                <details class="group">
-                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Examples</summary>
-                                    <ul class="ml-4 mt-1 space-y-1">
-                                        <li><a href="../../table-factory/examples/basic-table.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Basic Table</a></li>
-                                        <li><a href="../../table-factory/examples/table-with-api.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Table with API</a></li>
-                                        <li><a href="../../table-factory/examples/complete-example.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Complete Example</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li><a href="../../table-factory/api/interfaces.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">API Reference</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </aside>
-        
-        <main class="flex-1 ml-64">
-            <div class="max-w-4xl mx-auto px-8 py-12">
-                <div class="bg-white rounded-lg shadow-sm p-8">
-                    <div class="prose prose-lg max-w-none">
-                        <h1 class="text-4xl font-bold text-gray-900 mb-6 mt-8">Complete Example</h1>
-
+<div class="flex min-h-screen">
+<aside class="w-64 bg-white border-r border-gray-200 fixed h-screen overflow-y-auto" id="sidebar">
+<div class="p-6">
+<h1 class="text-2xl font-bold text-gray-900 mb-2"><a class="hover:text-blue-600" href="../../../index.html">Kitsng Docs</a></h1>
+<p class="text-sm text-gray-600 mb-6">v20 Documentation</p>
+<nav class="space-y-2">
+<div class="mb-4">
+<h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Form Factory</h2>
+<ul class="space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../../form-factory/index.html">Overview</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../../form-factory/installation.html">Installation</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../../form-factory/quick-start.html">Quick Start</a></li>
+<li class="ml-4">
+<details class="group">
+<summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Fields</summary>
+<ul class="ml-4 mt-1 space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/input.html">Input</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/textarea.html">Textarea</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/dropdown.html">Dropdown</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/checkbox.html">Checkbox</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/input-number.html">Input Number</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/input-phone.html">Input Phone</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/radio-button.html">Radio Button</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/multi-select.html">Multi Select</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/calendar-picker.html">Calendar Picker</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/lookup-select.html">Lookup Select</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/lookup-multi-select.html">Lookup Multi Select</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/file-upload.html">File Upload</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/color-picker.html">Color Picker</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/editor.html">Editor</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/google-map.html">Google Map</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/slider.html">Slider</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/icon-picker.html">Icon Picker</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/tree-select.html">Tree Select</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/auto-complete.html">Auto Complete</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/button.html">Button</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/fields/password.html">Password</a></li>
+</ul>
+</details>
+</li>
+<li class="ml-4">
+<details class="group">
+<summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Examples</summary>
+<ul class="ml-4 mt-1 space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/examples/basic-form.html">Basic Form</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/examples/complex-form.html">Complex Form</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/examples/dynamic-form.html">Dynamic Form</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../form-factory/examples/complete-example.html">Complete Example</a></li>
+</ul>
+</details>
+</li>
+</ul>
+</div>
+<div class="mb-4">
+<h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Table Factory</h2>
+<ul class="space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../../table-factory/index.html">Overview</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../../table-factory/installation.html">Installation</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../../table-factory/quick-start.html">Quick Start</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../../table-factory/overview.html">Architecture Overview</a></li>
+<li class="ml-4">
+<details class="group">
+<summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Components</summary>
+<ul class="ml-4 mt-1 space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../table-factory/components/table-factory.html">Table Factory</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../table-factory/components/fetch-table-factory.html">Fetch Table Factory</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../table-factory/components/tree-table-factory.html">Tree Table Factory</a></li>
+</ul>
+</details>
+</li>
+<li class="ml-4">
+<details class="group">
+<summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Features</summary>
+<ul class="ml-4 mt-1 space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../table-factory/features/column-templates.html">Column Templates</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../table-factory/features/api-integration.html">API Integration</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../table-factory/features/row-actions.html">Row Actions</a></li>
+</ul>
+</details>
+</li>
+<li class="ml-4">
+<details class="group">
+<summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Examples</summary>
+<ul class="ml-4 mt-1 space-y-1">
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../table-factory/examples/basic-table.html">Basic Table</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../table-factory/examples/table-with-api.html">Table with API</a></li>
+<li><a class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md" href="../../table-factory/examples/complete-example.html">Complete Example</a></li>
+</ul>
+</details>
+</li>
+<li><a class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../../table-factory/api/interfaces.html">API Reference</a></li>
+</ul>
+</div>
+</nav>
+</div>
+</aside>
+<main class="flex-1 ml-64">
+<div class="max-w-4xl mx-auto px-8 py-12">
+<div class="bg-white rounded-lg shadow-sm p-8">
+<div class="prose prose-lg max-w-none">
+<h1 class="text-4xl font-bold text-gray-900 mb-6 mt-8">Complete Example</h1>
 <p class="text-gray-700 mb-4 leading-relaxed">A comprehensive example showcasing all major features of Kitsng Table Factory.</p>
-
 <h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Full-Featured Table</h2>
-
 <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
@@ -150,373 +143,24 @@ import {
   KitsngPaginationResponse 
 } from 'kitsng-table-factory';
 
-<p class="text-gray-700 mb-4 leading-relaxed">@Component({
+@Component({
   selector: 'app-users',
-  template: <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">
-    <div class="p-4">
-      <h2>Users Management</h2>
-      
-      <!-- Search and Filters -->
-      <div class="mb-3 flex gap-2">
-        <input 
-          type="text" 
-          [(ngModel)]="searchTerm" 
-          (input)="onSearch()"
-          placeholder="Search users..."
-          class="p-2 rounded">
-        
-        <select 
-          [(ngModel)]="statusFilter" 
-          (change)="onFilterChange()"
-          class="p-2 rounded">
-          <option value="">All Status</option>
-          <option value="active">Active</option>
-          <option value="inactive">Inactive</option>
-        </select>
-        
-        <button 
-          (click)="refreshData()" 
-          class="p-2 rounded">
+  template: 
+    
+      Users Management
+
+          All Status
+          Active
+          Inactive
+
           Refresh
-        </button>
-      </div></p>
 
-<!-- Table -->
-      <kitsng-fetch-table-factory [tableConfig]="tableConfig">
-        <!-- Status Column Template -->
-        <ng-template kitsngColumnTemplate="status" let-value>
-          <span 
-            class="px-2 py-1 rounded text-sm font-medium" 
-            [class.bg-green-100]="value === 'active'"
-            [class.text-green-800]="value === 'active'"
-            [class.dark:bg-green-900]="value === 'active'"
-            [class.dark:text-green-200]="value === 'active'"
-            [class.bg-red-100]="value === 'inactive'"
-            [class.text-red-800]="value === 'inactive'"
-            [class.dark:bg-red-900]="value === 'inactive'"
-            [class.dark:text-red-200]="value === 'inactive'">
-<div class="overflow-x-auto my-6">
-<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
-<thead class="bg-gray-50">
-<tr>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-</tbody>
-</table>
-</div>
-          </span>
-        </ng-template>
-
-<!-- Avatar Column Template -->
-        <ng-template kitsngColumnTemplate="avatar" let-rowData="rowData">
-          <div class="flex items-center gap-2">
-            <img 
-<div class="overflow-x-auto my-6">
-<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
-<thead class="bg-gray-50">
-<tr>
-<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-</tbody>
-</table>
-</div>
               [alt]="rowData.name"
               class="avatar"
-              style="width: 40px; height: 40px; border-radius: 50%;">
-            <span>{{ rowData.name }}</span>
-          </div>
-        </ng-template>
+              style="width: 40px; height: 40px; border-radius: 50%;"&amp;gt;
+            {{ rowData.name }}
 
-<!-- Email Column Template -->
-        <ng-template kitsngColumnTemplate="email" let-value let-rowData="rowData">
-          <a [href]="'mailto:' + value" [title]="'Email ' + rowData.name">
-            {{ value }}
-          </a>
-        </ng-template>
-      </kitsng-fetch-table-factory>
-    </div>
-  </code>
-})
-export class UsersComponent implements OnInit {
-  @ViewChild('detailsTemplate') detailsTemplate!: TemplateRef<any>;
-  
-  tableConfig!: KitsngTableConfig;
-  refreshTrigger = new Subject<void>();
-  searchTerm: string = '';
-  statusFilter: string = '';
-
-<p class="text-gray-700 mb-4 leading-relaxed">constructor(private http: HttpClient) {}</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">ngOnInit() {
-    this.initializeTable();
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">initializeTable() {
-    this.tableConfig = {
-      columns: [
-        { 
-          field: 'id', 
-          header: 'ID', 
-          sortable: true, 
-          width: '80px',
-          visible: true
-        },
-        { 
-          field: 'avatar', 
-          header: 'User', 
-          sortable: false,
-          visible: true
-        },
-        { 
-          field: 'email', 
-          header: 'Email', 
-          sortable: true,
-          visible: true
-        },
-        { 
-          field: 'role', 
-          header: 'Role', 
-          sortable: true,
-          visible: true
-        },
-        { 
-          field: 'status', 
-          header: 'Status', 
-          sortable: true,
-          visible: true
-        },
-        { 
-          field: 'createdDate', 
-          header: 'Created', 
-          sortable: true,
-          visible: false
-        }
-      ],
-      data: [],
-      showSelectionCheckbox: true,
-      selectionMode: 'multiple',
-      showColumnToggle: true,
-      expandableRows: true,
-      expandedRows: [],
-      rowExpandTemplate: this.detailsTemplate,
-      actionButtons: [
-        {
-          icon: 'pi pi-eye',
-          label: 'View',
-          onClick: (item) => this.viewUser(item)
-        },
-        {
-          icon: 'pi pi-pencil',
-          label: 'Edit',
-          onClick: (item) => this.editUser(item)
-        },
-        {
-          icon: 'pi pi-trash',
-          label: 'Delete',
-          colorClass: 'p-button-danger',
-          onClick: (item) => this.deleteUser(item)
-        }
-      ],
-      bulkActions: [
-        {
-          icon: 'pi pi-trash',
-          label: 'Delete Selected',
-          colorClass: 'p-button-danger',
-          onClick: (selectedItems) => this.deleteSelected(selectedItems)
-        },
-        {
-          icon: 'pi pi-download',
-          label: 'Export Selected',
-          onClick: (selectedItems) => this.exportSelected(selectedItems)
-        }
-      ],
-      showBulkActions: true,
-      fetchApiInfo: {
-        fetchFunction: (query: KitsngTableQuery) => {
-          return this.http.post<KitsngPaginationResponse>('/api/users/page', this.buildApiQuery(query));
-        },
-        queryBuilder: (query) => this.buildApiQuery(query),
-        responseMapper: (response: any) => {
-          return {
-            items: response.data.items,
-            totalItems: response.data.totalCount,
-            pageInfo: {
-              totalItems: response.data.totalCount,
-              pageIndex: response.data.page,
-              pageSize: response.data.limit
-            }
-          };
-        },
-        refreshTrigger: this.refreshTrigger,
-        onDataLoaded: (data, pageInfo) => {
-          console.log(<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">Loaded ${data.length} of ${pageInfo.totalItems} users</code>);
-        },
-        onFetchDataError: (error) => {
-          console.error('Error loading users:', error);
-          this.handleError(error);
-        }
-      },
-      pageSize: 10,
-      pageIndex: 1,
-      showPaginator: true,
-      rowsPerPageOptions: [5, 10, 25, 50, 100],
-      onPageChanged: (event) => {
-        this.tableConfig.pageIndex = event.page + 1;
-        this.tableConfig.pageSize = event.rows;
-      },
-      onSorting: (event) => {
-        console.log('Sorting by:', event.field, event.order);
-      },
-      onRowClick: (event, rowData) => {
-        console.log('Row clicked:', rowData);
-      },
-      onRowDblClick: (event, rowData) => {
-        this.viewUser(rowData);
-      },
-      rowClass: (rowData) => {
-        if (rowData.status === 'inactive') return 'bg-gray-50';
-        return '';
-      },
-      loading: false,
-      loadingMessage: 'Loading users...'
-    };
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">buildApiQuery(query: KitsngTableQuery): any {
-    return {
-<div class="overflow-x-auto my-6">
-<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
-<thead class="bg-gray-50">
-<tr>
-<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-<tr class="hover:bg-gray-50">
-<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
-</tr>
-<tr class="hover:bg-gray-50">
-<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
-</tr>
-</tbody>
-</table>
-</div>
-      filters: {
-        ...this.transformFilters(query.filters),
-        status: this.statusFilter ? { value: this.statusFilter } : undefined
-      },
-      sortBy: this.getSortField(query.orders),
-      sortOrder: this.getSortOrder(query.orders)
-    };
-  }</p>
-
-<div class="overflow-x-auto my-6">
-<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
-<thead class="bg-gray-50">
-<tr>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-<tr class="hover:bg-gray-50">
-<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
-</tr>
-</tbody>
-</table>
-</div>
-    return Object.keys(orders)[0];
-  }</p>
-
-<div class="overflow-x-auto my-6">
-<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
-<thead class="bg-gray-50">
-<tr>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-<tr class="hover:bg-gray-50">
-<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
-</tr>
-</tbody>
-</table>
-</div>
-    const firstOrder = orders[Object.keys(orders)[0]];
-<div class="overflow-x-auto my-6">
-<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
-<thead class="bg-gray-50">
-<tr>
-<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-</tbody>
-</table>
-</div>
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">transformFilters(filters: any): any {
-    if (!filters) return {};
-    const apiFilters: any = {};
-    Object.keys(filters).forEach(key => {
-      apiFilters[key] = filters[key].value;
-    });
-    return apiFilters;
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">onSearch() {
-    this.refreshData();
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">onFilterChange() {
-    this.refreshData();
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">refreshData() {
-    this.refreshTrigger.next();
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">viewUser(user: any) {
-    console.log('View user:', user);
-    // Navigate to user detail page
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">editUser(user: any) {
-    console.log('Edit user:', user);
-    // Open edit modal or navigate
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">deleteUser(user: any) {
-    if (confirm(<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">Delete user ${user.name}?</code>)) {
-      console.log('Delete user:', user);
-      // Call delete API
-      this.refreshData();
-    }
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">deleteSelected(users: any[]) {
-    if (confirm(<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">Delete ${users.length} selected users?</code>)) {
-      console.log('Delete selected:', users);
-      // Call bulk delete API
-      this.refreshData();
-    }
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">exportSelected(users: any[]) {
-    console.log('Export selected:', users);
-    // Export logic
-  }</p>
-
-<p class="text-gray-700 mb-4 leading-relaxed">handleError(error: any) {
-    // Show error toast or message
-    console.error('Error:', error);
-  }
-}
-</code></pre></p>
-
-<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Features Demonstrated</h2>
-
+            {{ value }}</code></pre><h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Features Demonstrated</h2>
 <p class="text-gray-700 mb-4 leading-relaxed">✅ <strong class="font-semibold">API Integration</strong> - Generic fetch function with query builder and response mapper  
 ✅ <strong class="font-semibold">Column Templates</strong> - Custom rendering for status, avatar, and email  
 ✅ <strong class="font-semibold">Row Selection</strong> - Multiple selection with checkboxes  
@@ -532,20 +176,16 @@ export class UsersComponent implements OnInit {
 ✅ <strong class="font-semibold">Conditional Styling</strong> - Row classes based on status  
 ✅ <strong class="font-semibold">Loading State</strong> - Loading indicator  
 ✅ <strong class="font-semibold">Error Handling</strong> - Error callback</p>
-
 <h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Next Steps</h2>
-
 <ul class="list-disc list-inside space-y-2 my-4 ml-4">
-<li class="text-gray-700"><a href="../../table-factory/components/TABLE-FACTORY.html" class="text-blue-600 hover:text-blue-800 underline">Component Documentation</a></li>
-<li class="text-gray-700"><a href="../../table-factory/features/API-INTEGRATION.html" class="text-blue-600 hover:text-blue-800 underline">Feature Guides</a></li>
-<li class="text-gray-700"><a href="../../table-factory/api/INTERFACES.html" class="text-blue-600 hover:text-blue-800 underline">API Reference</a></li>
+<li class="text-gray-700"><a class="text-blue-600 hover:text-blue-800 underline" href="../../table-factory/components/TABLE-FACTORY.html">Component Documentation</a></li>
+<li class="text-gray-700"><a class="text-blue-600 hover:text-blue-800 underline" href="../../table-factory/features/API-INTEGRATION.html">Feature Guides</a></li>
+<li class="text-gray-700"><a class="text-blue-600 hover:text-blue-800 underline" href="../../table-factory/api/INTERFACES.html">API Reference</a></li>
 </ul>
+</div>
+</div>
+</div>
+</main>
+</div>
 
-
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-</body>
-</html>
+</body></html>
