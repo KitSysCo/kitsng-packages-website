@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Phone with Custom Data Provider Example - Kitsng Docs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        pre[class*="language-"] {
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+        code[class*="language-"] {
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="flex min-h-screen">
+        <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 fixed h-screen overflow-y-auto">
+            <div class="p-6">
+                <h1 class="text-2xl font-bold text-gray-900 mb-2"><a href="../../index.html" class="hover:text-blue-600">Kitsng Docs</a></h1>
+                <p class="text-sm text-gray-600 mb-6">v20 Documentation</p>
+                
+                <nav class="space-y-2">
+                    <div class="mb-4">
+                        <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Form Factory</h2>
+                        <ul class="space-y-1">
+                            <li><a href="../form-factory/index.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Overview</a></li>
+                            <li><a href="../form-factory/installation.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Installation</a></li>
+                            <li><a href="../form-factory/quick-start.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Quick Start</a></li>
+                            <li class="ml-4">
+                                <details class="group">
+                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Fields</summary>
+                                    <ul class="ml-4 mt-1 space-y-1">
+                                        <li><a href="../form-factory/fields/input.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Input</a></li>
+                                        <li><a href="../form-factory/fields/textarea.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Textarea</a></li>
+                                        <li><a href="../form-factory/fields/dropdown.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Dropdown</a></li>
+                                        <li><a href="../form-factory/fields/checkbox.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Checkbox</a></li>
+                                        <li><a href="../form-factory/fields/input-number.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Input Number</a></li>
+                                        <li><a href="../form-factory/fields/input-phone.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Input Phone</a></li>
+                                        <li><a href="../form-factory/fields/radio-button.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Radio Button</a></li>
+                                        <li><a href="../form-factory/fields/multi-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Multi Select</a></li>
+                                        <li><a href="../form-factory/fields/calendar-picker.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Calendar Picker</a></li>
+                                        <li><a href="../form-factory/fields/lookup-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Lookup Select</a></li>
+                                        <li><a href="../form-factory/fields/lookup-multi-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Lookup Multi Select</a></li>
+                                        <li><a href="../form-factory/fields/file-upload.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">File Upload</a></li>
+                                        <li><a href="../form-factory/fields/color-picker.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Color Picker</a></li>
+                                        <li><a href="../form-factory/fields/editor.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Editor</a></li>
+                                        <li><a href="../form-factory/fields/google-map.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Google Map</a></li>
+                                        <li><a href="../form-factory/fields/slider.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Slider</a></li>
+                                        <li><a href="../form-factory/fields/icon-picker.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Icon Picker</a></li>
+                                        <li><a href="../form-factory/fields/tree-select.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Tree Select</a></li>
+                                        <li><a href="../form-factory/fields/auto-complete.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Auto Complete</a></li>
+                                        <li><a href="../form-factory/fields/button.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Button</a></li>
+                                        <li><a href="../form-factory/fields/password.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Password</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li class="ml-4">
+                                <details class="group">
+                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Examples</summary>
+                                    <ul class="ml-4 mt-1 space-y-1">
+                                        <li><a href="../form-factory/examples/basic-form.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Basic Form</a></li>
+                                        <li><a href="../form-factory/examples/complex-form.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Complex Form</a></li>
+                                        <li><a href="../form-factory/examples/dynamic-form.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Dynamic Form</a></li>
+                                        <li><a href="../form-factory/examples/complete-example.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Complete Example</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Table Factory</h2>
+                        <ul class="space-y-1">
+                            <li><a href="../table-factory/index.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Overview</a></li>
+                            <li><a href="../table-factory/installation.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Installation</a></li>
+                            <li><a href="../table-factory/quick-start.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Quick Start</a></li>
+                            <li><a href="../table-factory/overview.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Architecture Overview</a></li>
+                            <li class="ml-4">
+                                <details class="group">
+                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Components</summary>
+                                    <ul class="ml-4 mt-1 space-y-1">
+                                        <li><a href="../table-factory/components/table-factory.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Table Factory</a></li>
+                                        <li><a href="../table-factory/components/fetch-table-factory.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Fetch Table Factory</a></li>
+                                        <li><a href="../table-factory/components/tree-table-factory.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Tree Table Factory</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li class="ml-4">
+                                <details class="group">
+                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Features</summary>
+                                    <ul class="ml-4 mt-1 space-y-1">
+                                        <li><a href="../table-factory/features/column-templates.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Column Templates</a></li>
+                                        <li><a href="../table-factory/features/api-integration.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">API Integration</a></li>
+                                        <li><a href="../table-factory/features/row-actions.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Row Actions</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li class="ml-4">
+                                <details class="group">
+                                    <summary class="cursor-pointer px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Examples</summary>
+                                    <ul class="ml-4 mt-1 space-y-1">
+                                        <li><a href="../table-factory/examples/basic-table.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Basic Table</a></li>
+                                        <li><a href="../table-factory/examples/table-with-api.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Table with API</a></li>
+                                        <li><a href="../table-factory/examples/complete-example.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Complete Example</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li><a href="../table-factory/api/interfaces.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">API Reference</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+        
+        <main class="flex-1 ml-64">
+            <div class="max-w-4xl mx-auto px-8 py-12">
+                <div class="bg-white rounded-lg shadow-sm p-8">
+                    <div class="prose prose-lg max-w-none">
+                        <h1 class="text-4xl font-bold text-gray-900 mb-6 mt-8">Input Phone with Custom Data Provider Example</h1>
+
+<p class="text-gray-700 mb-4 leading-relaxed">This example shows how to use the <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">input-phone</code> component with a custom data provider to load countries from an external source.</p>
+
+<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Approach 1: Using Generic Data Provider (Recommended)</h2>
+
+<h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Step 1: Create a Custom Country Data Provider</h3>
+
+<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { 
+  ILookupDataProvider, 
+  LookupDataLoadConfig, 
+  LookupResponse 
+} from 'kitsng-form-factory';
+
+<p class="text-gray-700 mb-4 leading-relaxed">export interface Country {
+  id: string;
+  name: string;
+  countryCode: string;
+  phoneCode: string;
+  flag?: string;
+}</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">@Injectable({
+  providedIn: 'root'
+})
+export class CountryDataProvider implements ILookupDataProvider<Country> {
+  constructor(private http: HttpClient) {}</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">loadData(config: LookupDataLoadConfig): Observable<LookupResponse<Country>> {
+    // Example: Load countries from your API
+    return this.http.get<any>('/api/countries', {
+      params: {
+        page: config.pageIndex.toString(),
+        size: config.pageSize.toString(),
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+</tbody>
+</table>
+</div>
+        ...config.query
+      }
+    }).pipe(
+      map(response => ({
+        data: {
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">response.items</th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+</tbody>
+</table>
+</div>
+          pageInfo: {
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">response.data?.length</th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+</tbody>
+</table>
+</div>
+            pageIndex: config.pageIndex,
+            pageSize: config.pageSize
+          }
+        }
+      }))
+    );
+  }</p>
+
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+</tbody>
+</table>
+</div>
+    return this.http.get<Country>(<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">/api/countries/${id}</code>);
+  }</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">extractItems(response: LookupResponse<Country>): Country[] {
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">response.items</th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+</tbody>
+</table>
+</div>
+  }</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">extractTotalItems(response: LookupResponse<Country>): number {
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">response.totalItems</th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+</tbody>
+</table>
+</div>
+  }
+}
+</code></pre></p>
+
+<h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Step 2: Use the Provider in Your Component</h3>
+
+<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { KitsngFormFactoryModel } from 'kitsng-form-factory';
+import { CountryDataProvider } from './country-data-provider';
+
+<p class="text-gray-700 mb-4 leading-relaxed">@Component({
+  selector: 'app-phone-example',
+  template: <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">
+    <kitsng-form-factory 
+      [form]="form" 
+      [fields]="fields">
+    </kitsng-form-factory>
+  </code>
+})
+export class PhoneExampleComponent implements OnInit {
+  form: FormGroup;
+  fields: KitsngFormFactoryModel[] = [];</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">constructor(
+    private fb: FormBuilder,
+    private countryProvider: CountryDataProvider
+  ) {
+    this.form = this.fb.group({});
+  }</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">ngOnInit() {
+    this.fields = [
+      {
+        controlType: 'input-phone',
+        colSize: 'col-span-12',
+        options: {
+          formControlName: 'phoneNumber',
+          label: 'Phone Number',
+          placeholder: 'Enter phone number',
+          // Use the custom data provider
+          dataProvider: this.countryProvider,
+          // Map country data to expected format
+          mappOptions: (countries) => {
+            return countries.map((country: any) => ({
+              ...country,
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+<td class="px-4 py-3 text-sm text-gray-700 border-b">country.code</td>
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+</tr>
+</tbody>
+</table>
+</div>
+            }));
+          },
+          // Optional: Custom page size
+          pageSize: 250,
+          // Optional: Additional query parameters
+          query: {
+            active: true,
+            sortBy: 'name'
+          },
+          validators: {
+            required: true
+          }
+        }
+      }
+    ];
+  }
+}
+</code></pre></p>
+
+<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Approach 2: Using Load Data Function</h2>
+
+<p class="text-gray-700 mb-4 leading-relaxed">If you prefer a simpler approach without creating a full provider class:</p>
+
+<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { KitsngFormFactoryModel } from 'kitsng-form-factory';
+import { HttpClient } from '@angular/common/http';
+
+<p class="text-gray-700 mb-4 leading-relaxed">@Component({
+  selector: 'app-phone-example',
+  template: <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">
+    <kitsng-form-factory 
+      [form]="form" 
+      [fields]="fields">
+    </kitsng-form-factory>
+  </code>
+})
+export class PhoneExampleComponent implements OnInit {
+  form: FormGroup;
+  fields: KitsngFormFactoryModel[] = [];</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">constructor(
+    private fb: FormBuilder,
+    private http: HttpClient
+  ) {
+    this.form = this.fb.group({});
+  }</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">ngOnInit() {
+    this.fields = [
+      {
+        controlType: 'input-phone',
+        colSize: 'col-span-12',
+        options: {
+          formControlName: 'phoneNumber',
+          label: 'Phone Number',
+          placeholder: 'Enter phone number',
+          // Use loadData function
+          loadData: (config) => {
+            return this.http.get<any>('/api/countries', {
+              params: {
+                page: config.pageIndex.toString(),
+                size: config.pageSize.toString(),
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+</tbody>
+</table>
+</div>
+              }
+            }).pipe(
+              map(response => ({
+                data: {
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">response.items</th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+</tbody>
+</table>
+</div>
+                  pageInfo: {
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+</tbody>
+</table>
+</div>
+                    pageIndex: config.pageIndex,
+                    pageSize: config.pageSize
+                  }
+                }
+              }))
+            );
+          },
+          // Extract items from response
+          extractItems: (response) => {
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">response.items</th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+</tbody>
+</table>
+</div>
+          },
+          // Map country data to expected format
+          mappOptions: (countries) => {
+            return countries.map((country: any) => ({
+              ...country,
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">country.countryCode</th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+<td class="px-4 py-3 text-sm text-gray-700 border-b">country.code</td>
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+</tr>
+</tbody>
+</table>
+</div>
+            }));
+          },
+          pageSize: 250,
+          validators: {
+            required: true
+          }
+        }
+      }
+    ];
+  }
+}
+</code></pre></p>
+
+<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Approach 3: Using Static Countries Data</h2>
+
+<p class="text-gray-700 mb-4 leading-relaxed">If you have static country data or want to load it from a JSON file:</p>
+
+<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { Observable, of } from 'rxjs';
+import { KitsngFormFactoryModel } from 'kitsng-form-factory';
+import countriesData from './countries.json';
+
+<p class="text-gray-700 mb-4 leading-relaxed">@Component({
+  selector: 'app-phone-example',
+  template: <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">
+    <kitsng-form-factory 
+      [form]="form" 
+      [fields]="fields">
+    </kitsng-form-factory>
+  </code>
+})
+export class PhoneExampleComponent implements OnInit {
+  form: FormGroup;
+  fields: KitsngFormFactoryModel[] = [];</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({});
+  }</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">ngOnInit() {
+    this.fields = [
+      {
+        controlType: 'input-phone',
+        colSize: 'col-span-12',
+        options: {
+          formControlName: 'phoneNumber',
+          label: 'Phone Number',
+          placeholder: 'Enter phone number',
+          // Use loadData function with static data
+          loadData: (config) => {
+            let filteredCountries = countriesData;
+            
+            // Apply search filter if provided
+            if (config.search) {
+              const searchLower = config.search.toLowerCase();
+              filteredCountries = countriesData.filter((country: any) =>
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+</tr>
+</tbody>
+</table>
+</div>
+                country.code.toLowerCase().includes(searchLower)
+              );
+            }
+            
+            // Apply pagination
+            const start = config.pageIndex * config.pageSize;
+            const end = start + config.pageSize;
+            const paginatedCountries = filteredCountries.slice(start, end);
+            
+            return of({
+              data: {
+                items: paginatedCountries,
+                pageInfo: {
+                  totalItems: filteredCountries.length,
+                  pageIndex: config.pageIndex,
+                  pageSize: config.pageSize
+                }
+              }
+            });
+          },
+          // Map country data to expected format
+          mappOptions: (countries) => {
+            return countries.map((country: any) => ({
+              ...country,
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">country.callingCode</th>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+<td class="px-4 py-3 text-sm text-gray-700 border-b">country.iso2</td>
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+</tr>
+</tbody>
+</table>
+</div>
+            }));
+          },
+          pageSize: 250,
+          validators: {
+            required: true
+          }
+        }
+      }
+    ];
+  }
+}
+</code></pre></p>
+
+<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Approach 4: Using Static Countries from google-libphonenumber</h2>
+
+<p class="text-gray-700 mb-4 leading-relaxed">If you don't have a data provider and want to use built-in country codes from google-libphonenumber:</p>
+
+<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">{
+  controlType: 'input-phone',
+  colSize: 'col-span-12',
+  options: {
+    formControlName: 'phoneNumber',
+    label: 'Phone Number',
+    placeholder: 'Enter phone number',
+    // Use google-libphonenumber to get countries
+    staticCountriesCode: true,
+    validators: {
+      required: true
+    }
+  }
+}
+</code></pre>
+
+<strong class="font-semibold">Note:</strong> This will only be used if no provider is available (no <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">dataProvider</code>, no <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">loadData</code>, and no <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">entity</code>/<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">apiBaseUrl</code>).
+
+<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Approach 5: Using Legacy API (Backward Compatible)</h2>
+
+<p class="text-gray-700 mb-4 leading-relaxed">If you're using the existing API structure:</p>
+
+<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">{
+  controlType: 'input-phone',
+  colSize: 'col-span-12',
+  options: {
+    formControlName: 'phoneNumber',
+    label: 'Phone Number',
+    placeholder: 'Enter phone number',
+    // Legacy API approach
+    entity: 'Countries',
+    apiBaseUrl: 'https://api.example.com',
+    module: 'SharedData',
+    version: 'v1.2',
+    query: {
+      active: true
+    },
+    memoryCache: true, // Cache countries in memory
+    validators: {
+      required: true
+    }
+  }
+}
+</code></pre>
+
+<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Complete Example with Multiple Phone Fields</h2>
+
+<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { KitsngFormFactoryModel } from 'kitsng-form-factory';
+import { CountryDataProvider } from './country-data-provider';
+
+<p class="text-gray-700 mb-4 leading-relaxed">@Component({
+  selector: 'app-contact-form',
+  template: <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">
+    <kitsng-form-factory 
+      [form]="form" 
+      [fields]="fields"
+      (submit)="onSubmit()">
+    </kitsng-form-factory>
+  </code>
+})
+export class ContactFormComponent implements OnInit {
+  form: FormGroup;
+  fields: KitsngFormFactoryModel[] = [];</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">constructor(
+    private fb: FormBuilder,
+    private countryProvider: CountryDataProvider
+  ) {
+    this.form = this.fb.group({});
+  }</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">ngOnInit() {
+    this.fields = [
+      {
+        controlType: 'input',
+        colSize: 'col-span-12',
+        options: {
+          formControlName: 'name',
+          label: 'Full Name',
+          placeholder: 'Enter your name',
+          validators: {
+            required: true
+          }
+        }
+      },
+      {
+        controlType: 'input-phone',
+        colSize: 'col-span-12',
+        options: {
+          formControlName: 'mobilePhone',
+          label: 'Mobile Phone',
+          placeholder: 'Enter mobile phone number',
+          dataProvider: this.countryProvider,
+          mappOptions: (countries) => {
+            return countries.map((country: any) => ({
+              ...country,
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+</tr>
+</tbody>
+</table>
+</div>
+            }));
+          },
+          pageSize: 250,
+          validators: {
+            required: true
+          },
+          // Hook to handle phone number changes
+          ngModelChange: (value, formGroup) => {
+            console.log('Phone number changed:', value);
+            // You can update other fields based on phone number
+          }
+        }
+      },
+      {
+        controlType: 'input-phone',
+        colSize: 'col-span-12',
+        options: {
+          formControlName: 'homePhone',
+          label: 'Home Phone (Optional)',
+          placeholder: 'Enter home phone number',
+          dataProvider: this.countryProvider,
+          mappOptions: (countries) => {
+            return countries.map((country: any) => ({
+              ...country,
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+</tr>
+</tbody>
+</table>
+</div>
+            }));
+          },
+          pageSize: 250
+        }
+      }
+    ];
+  }</p>
+
+<p class="text-gray-700 mb-4 leading-relaxed">onSubmit() {
+    if (this.form.valid) {
+      console.log('Form value:', this.form.value);
+      // Handle form submission
+    }
+  }
+}
+</code></pre></p>
+
+<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Expected Country Data Format</h2>
+
+<p class="text-gray-700 mb-4 leading-relaxed">The input-phone component expects countries to have the following structure:</p>
+
+<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">interface Country {
+  CountryCode: string;  // Required: Phone country code (e.g., "1", "44", "971")
+  id: string;          // Required: Country identifier for flag display (e.g., "us", "gb", "ae")
+  // Optional: Any other properties you want to include
+  name?: string;
+  flag?: string;
+}
+</code></pre>
+
+<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Custom Data Mapping</h2>
+
+<p class="text-gray-700 mb-4 leading-relaxed">The <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">mappOptions</code> function allows you to transform your API response to match the expected format:</p>
+
+<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="language-typescript">mappOptions: (countries) => {
+  return countries.map((country: any) => {
+    // Transform your API response to expected format
+    return {
+      ...country,
+      // Map phone code field (adjust based on your API)
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+</tr>
+</tbody>
+</table>
+</div>
+                   country.code,
+      // Map country ID for flag display
+<div class="overflow-x-auto my-6">
+<table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"></th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-4 py-3 text-sm text-gray-700 border-b"></td>
+</tr>
+</tbody>
+</table>
+</div>
+          country.isoCode?.toLowerCase()
+    };
+  });
+}
+</code></pre>
+
+<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Priority Order</h2>
+
+<p class="text-gray-700 mb-4 leading-relaxed">The component will try to load countries in this order:</p>
+
+<ol class="list-decimal list-inside space-y-2 my-4 ml-4">
+<li class="text-gray-700"><strong class="font-semibold">Generic Data Provider</strong> (<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">dataProvider</code>) - Highest priority</li>
+<li class="text-gray-700"><strong class="font-semibold">Load Data Function</strong> (<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">loadData</code>)</li>
+<li class="text-gray-700"><strong class="font-semibold">Legacy API</strong> (<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">entity</code>/<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">apiBaseUrl</code>)</li>
+<li class="text-gray-700"><strong class="font-semibold">Static Countries</strong> (<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">staticCountriesCode: true</code>) - Only if no provider is available</li>
+<li class="text-gray-700"><strong class="font-semibold">Fallback to Legacy API</strong> with default entity 'Countries'</li>
+</ol>
+
+<h2 class="text-3xl font-semibold text-gray-900 mb-4 mt-8">Notes</h2>
+
+<ul class="list-disc list-inside space-y-2 my-4 ml-4">
+<li class="text-gray-700">The component automatically handles loading states and errors</li>
+<li class="text-gray-700">Countries are loaded once and cached (if <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">memoryCache: true</code>)</li>
+<li class="text-gray-700">The phone number validation uses Google's libphonenumber library</li>
+<li class="text-gray-700">The country code dropdown shows flags if you have the flag CSS classes set up</li>
+<li class="text-gray-700">You can customize the country data format using <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">mappOptions</code></li>
+<li class="text-gray-700">When using <code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">staticCountriesCode: true</code>, countries are loaded from google-libphonenumber's supported regions</li>
+<li class="text-gray-700">Static countries include all regions supported by google-libphonenumber (200+ countries)</li>
+<li class="text-gray-700">Countries are sorted by country code when using static countries</li>
+</ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
